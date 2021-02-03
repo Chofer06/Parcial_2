@@ -19,7 +19,11 @@ use App\Http\Controllers\EditorialController;
 Route::get('/', [AdministracionController::class,'Index']);
 
 //Libros
-Route::get('libros', [LibrosController::class,'Libros']);
+Route::get('libros', [LibrosController::class,'Libros'])->name('listado');
+Route::get('libros/registrar', [LibrosController::class,'RegistroForm'])->name('form_registro');
+Route::post('libros/registrar', [LibrosController::class,'Registro'])->name('registrar');
+Route::get('libros/actualizar', [LibrosController::class,'ActualizarForm']);
+Route::post('libros/actualizar', [LibrosController::class,'Actualzar']);
 
 //Editorial
 Route::get('editorial', [EditorialController::class,'Editorial']);
