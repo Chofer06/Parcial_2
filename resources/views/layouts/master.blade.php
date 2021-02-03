@@ -19,13 +19,9 @@
 
 
         <footer class="page-footer font-small black darken-3" >
-            <div class="card text-white bg-primary mb-3" style="max-width: 90rem;">
-                <div class="card-header" align="center">© 2020 Copyright: davidmueses0@gmail.com</div>
-                <div class="card-body">
-                    <h5 class="card-title" align="center"><strong>LIBRERIA LA JUANAPANA</strong></h5>
-                    <p class="card-text" align="center">Los Mejores Libros a tu alcance</p>
-                </div>
-                <div class="card-header" align="right" style="background: black">Diseñado Por: David Mueses<br>Universidad De Nariño</div>
+            <div class="card text-white bg-secondary" style="max-width: 90rem;">
+                <div class="card-header" align="center">© 2020 Copyright: davidmueses0@gmail.com<br>LIBRERIA LA JUANAPANA
+                <br>Los Mejores Libros a tu alcance<br><strong>David Mueses<br>Universidad De Nariño</strong></div>
             </div>
         </footer>
     </body>
