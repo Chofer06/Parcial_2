@@ -23,10 +23,10 @@ class LibrosController extends Controller
         $libro = new Libro();
         $libro->isbn = $request->input('isbn');
         $libro->titulo = $request->input('titulo');
-        $producto->precio = $request->input('precio');
-        $producto->stock = $request->input('stock');
-        $producto->editorial = $request->input('editorial');
-        $producto->save();
+        $libro->precio = $request->input('precio');
+        $libro->stock = $request->input('stock');
+        $libro->editorial = $request->input('editorial');
+        $libro->save();
         return redirect()->route('listado');
     }
 
@@ -36,15 +36,13 @@ class LibrosController extends Controller
     }
 
     public function Actulizar(Request $request){
-        $producto = new Producto();
-        $producto->nombreProducto = $request->input('nombrePro');
-        $producto->cantidadProducto = $request->input('cantidadPro');
-        $producto->precioProducto = $request->input('precioPro');
-        $producto->fotoProducto = $request->input('fotoPro');
-        $producto->categoria = $request->input('categorias');
-        $producto->save();
-        return redirect()->route('listadoP');
-
-        return view('form_registro');
+        $libro = new Libro();
+        $libro->isbn = $request->input('isbn');
+        $libro->titulo = $request->input('titulo');
+        $libro->precio = $request->input('precio');
+        $libro->stock = $request->input('stock');
+        $libro->editorial = $request->input('editorial');
+        $libro->save();
+        return redirect()->route('listado');
     }
 }

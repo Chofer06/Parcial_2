@@ -36,11 +36,11 @@
                     @if($l->stock > 10)
                         <td>Disponible</td>
                     @endif
-                    <td> {{ $l ->editorial }}</td>
+                    <td> {{ $l ->nombre }}</td>
                     <td> {{ $l ->precio }}</td>
-                    @if($l->editorial == "Norma" || $l->editorial == "La Santillana")
+                    @if($l->nombre == "Norma" || $l->nombre == "La Santillana")
                         @php($descuento = ($l->precio)*0.05)
-                        <td> {{ $descuento}}</td>
+                        <td> {{ $descuento }}</td>
                     @else
                         <td> 0 </td>
                     @endif

@@ -27,6 +27,8 @@
         </select>
         <br><br>
 		<button type="submit" class="btn btn-success">Registrar</button>
-        <button type="button" class="btn btn-danger">Cancelar</button>
+        <a href="{{url('libros')}}">
+            <button type="button" class="btn btn-danger">Cancelar</button>
+        </a>
 	</form>
 @stop
