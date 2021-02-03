@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class LibrosController extends Controller
 {
     public function Libros(){
-    	return view('libros');
+        $libro = DB::table('libro')->get();
+    	return view('libros',['libro' => $libro]);
     }
 }

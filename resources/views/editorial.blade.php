@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody class="table table-striped table-secondary">
-        @foreach($editorial as $e)
+            @foreach($editorial as $e)
                 <tr>
                     <td> {{ $e ->id }} </td>
                     <td> {{ $e ->nombre }} </td>
@@ -20,7 +20,7 @@
                     <td> {{ $e ->ciudad }}</td>
                     <td> {{ $e ->telefomo }}</td>
                 </tr>
-        @endforeach
+            @endforeach
         </tbody>
     </table>
 @stop
