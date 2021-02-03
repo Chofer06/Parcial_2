@@ -17,8 +17,10 @@ class CreateLibroTable extends Migration
             $table->id();
             $table->string('isbn',10);
             $table->string('titulo',200);
-            $table->float('precio');
-            $table->int('stock');
+            $table->float('precio',8,2);
+            $table->integer('stock');
+            $table->unsignedBigInteger('editorial');
+            $table->foreign('editorial')->references('id')->on('editorial');
             $table->timestamps();
         });
     }
