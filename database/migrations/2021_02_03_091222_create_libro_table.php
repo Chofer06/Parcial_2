@@ -15,6 +15,10 @@ class CreateLibroTable extends Migration
     {
         Schema::create('libro', function (Blueprint $table) {
             $table->id();
+            $table->string('isbn',10);
+            $table->string('titulo',200);
+            $table->float('precio');
+            $table->int('stock');
             $table->timestamps();
         });
     }

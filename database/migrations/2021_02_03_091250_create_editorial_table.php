@@ -15,6 +15,10 @@ class CreateEditorialTable extends Migration
     {
         Schema::create('editorial', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre',100);
+            $table->string('direccion',60);
+            $table->string('ciudad',30);
+            $table->string('telefomo',10);
             $table->timestamps();
         });
     }
