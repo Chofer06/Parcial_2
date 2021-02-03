@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdministracionController;
+use App\Http\Controllers\LibrosController;
+use App\Http\Controllers\EditorialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Pantalla Principal
+Route::get('/', [AdministracionController::class,'Index']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Libros
+Route::get('libros', [LibrosController::class,'Libros']);
+
+//Editorial
+Route::get('editorial', [EditorialController::class,'Editorial']);
