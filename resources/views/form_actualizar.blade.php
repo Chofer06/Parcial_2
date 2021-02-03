@@ -1,23 +1,23 @@
 @extends('layouts.master')
 @section('content')
-    <br><h3 align="center"><strong>Registrar Libros</strong></h3><br>
-	<form action="{{url('libros/registrar')}}" method="POST">
+    <br><h3 align="center"><strong>Actualizar Libros</strong></h3><br>
+	<form action="{{route('actualizarlibro', $libros->id)}}" method="POST">
 		@csrf
         <div class="md-form">
 			<label><strong>ISBN</strong></label>
-	        <input required type="text" class="form-control input-sm" id="isbn" name="isbn">
+	        <input required type="text" class="form-control input-sm" value="{{$libros->isbn}}" id="isbn" name="isbn">
 	    </div>
 		<div class="md-form">
 			<label><strong>TITULO</strong></label>
-	        <input required type="text" class="form-control input-sm" id="titulo" name="titulo">
+	        <input required type="text" class="form-control input-sm" value="{{$libros->nombre}}" id="titulo" name="titulo">
 	    </div>
         <div class="md-form">
 			<label><strong>PRECIO</strong></label>
-	        <input required type="text" class="form-control input-sm" id="precio" name="precio">
+	        <input required type="text" class="form-control input-sm" value="{{$libros->precio}}" id="precio" name="precio">
 	    </div>
 		<div class="md-form">
 			<label><strong>STOCK</strong></label>
-	        <input required type="text" class="form-control input-sm" id="stock" name="stock">
+	        <input required type="text" class="form-control input-sm" value="{{$libros->stock}}" id="stock" name="stock">
 	    </div>
 		<label for="productos"><strong>EDITORIAL</strong></label>
 		<select class="custom-select" id="categorias" name="editorial">

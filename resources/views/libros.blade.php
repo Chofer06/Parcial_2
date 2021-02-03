@@ -45,7 +45,7 @@
                         <td> 0 </td>
                     @endif
                     <td>
-                    <a href="libros/actualizar">
+                    <a href="{{route('form_actualizalibro', $l->id)}}">
                         <button class="btn btn-warning my-2 my-sm-0" type="submit" ><strong>ACTUALIZAR</strong></button>
                     </a>
                 </tr>

@@ -30,13 +30,14 @@ class LibrosController extends Controller
         return redirect()->route('listado');
     }
 
-    public function ActualizarForm(){
+    public function ActualizarForm($id){
+        $libros = Libro::findOrFail($id);
         $editorial = Editorial::all();
-        return view('form_actualizar', compact('editorial'));
+        return view('form_actualizar', compact('libros','editorial'));
     }
 
-    public function Actulizar(Request $request){
-        $libro = new Libro();
+    public function Actualizar(Request $request, $id){
+        $libro = Libro::findOrFail($id);
         $libro->isbn = $request->input('isbn');
         $libro->titulo = $request->input('titulo');
         $libro->precio = $request->input('precio');

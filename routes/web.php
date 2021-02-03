@@ -20,10 +20,10 @@ Route::get('/', [AdministracionController::class,'Index']);
 
 //Libros
 Route::get('libros', [LibrosController::class,'Libros'])->name('listado');
-Route::get('libros/registrar', [LibrosController::class,'RegistroForm'])->name('form_registro');
-Route::post('libros/registrar', [LibrosController::class,'Registro'])->name('registrar');
-Route::get('libros/actualizar', [LibrosController::class,'ActualizarForm']);
-Route::post('libros/actualizar', [LibrosController::class,'Actualzar']);
+Route::get('libros/registrar', [LibrosController::class,'RegistroForm']);
+Route::post('libros/registrar', [LibrosController::class,'Registro']);
+Route::get('libros/actualizar/{id}', [LibrosController::class,'ActualizarForm'])->name('form_actualizalibro');
+Route::post('libros/actualizar/{id}', [LibrosController::class,'Actualizar'])->name('actualizarlibro');
 
 //Editorial
 Route::get('editorial', [EditorialController::class,'Editorial']);
