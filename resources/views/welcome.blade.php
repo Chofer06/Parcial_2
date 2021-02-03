@@ -22,5 +22,11 @@
     </head>
     <body class="antialiased">
         <h1>HOLA COMO ESTAS</h1>
+        <table>
+            <td>HOLA
+                <tr>COMO</tr>
+                <tr>ESTAS</tr>
+            </td>
+        </table>
     </body>
 </html>
